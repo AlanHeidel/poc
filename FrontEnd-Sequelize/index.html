@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="seccion menu">
+      <h1>MENU</h1>
+      <button onclick="mostrar('agregar-producto')">Agregar Producto</button>
+      <button onclick="mostrar('realizar-pedido')">Realizar Pedido</button>
+      <button onclick="mostrar('ver-pedidos')">Ver Pedidos</button>
+    </div>
+
+    <div class="seccion agregar-producto" style="display: none">
+      <div class="page-title">
+        <button onclick="mostrar('menu')">←</button>
+        <h1>Agregar Producto</h1>
+      </div>
+      <form class="form-producto">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required />
+
+        <label for="precio">Precio:</label>
+        <input type="number" id="precio" name="precio" required step="0.01" />
+
+        <button type="submit">Agregar</button>
+      </form>
+      <p id="mensaje"></p>
+    </div>
+
+    <div class="seccion realizar-pedido" style="display: none">
+      <div class="page-title">
+        <button onclick="mostrar('menu')">←</button>
+        <h1>Realizar Pedido</h1>
+      </div>
+    </div>
+
+    <div class="seccion ver-pedidos" style="display: none">
+      <div class="page-title">
+        <button onclick="mostrar('menu')">←</button>
+        <h1>Pedidos</h1>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
