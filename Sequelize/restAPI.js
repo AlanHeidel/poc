@@ -13,10 +13,15 @@ router.get("/productos", async (req, res) => {
   }
 });
 
-// Obtener todos los pedidos
+// Obtener todos los pedidos con productos
 router.get("/pedidos", async (req, res) => {
   try {
-    const pedidos = await Pedido.findAll();
+    const pedidos = await Pedido.findAll({
+      include: {
+        model: Producto,
+        through: { attributes: ["cantidad"] }, // traer solo cantidad de la tabla intermedia
+      },
+    });
     res.json(pedidos);
   } catch (error) {
     res.status(500).json({ error: error.message });
@@ -46,7 +51,7 @@ router.post("/pedidos", async (req, res) => {
 
     // Asociar productos al pedido con cantidad
     for (const p of productos) {
-      await pedido.addProducto(p.idproducto, {
+      await pedido.addProducto(p.id, {
         through: { cantidad: p.cantidad },
       });
     }

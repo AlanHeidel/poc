@@ -35,4 +35,20 @@
 .form-producto {
   display: flex;
   flex-direction: column;
+  gap: 40px;
+}
+
+.nombre-precio-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
 }
