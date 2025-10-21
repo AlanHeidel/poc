@@ -1,25 +1,25 @@
-# 🧩 POC – Sistema de Pedidos con Sequelize
+# POC – Sistema de Pedidos con Sequelize
 
 Este proyecto es una **Prueba de Concepto (POC)** desarrollada para la **Universidad Tecnológica Nacional – Facultad Regional Rosario (UTN FRRo)**, en la provincia de Santa Fe, Argentina.  
 El objetivo principal es **demostrar el uso de Sequelize** como ORM en un entorno **Node.js + Express**, simulando un flujo básico de comercio electrónico: **gestión de productos, creación de pedidos y relación Pedido–Producto**.
 
 ---
 
-## 🚀 Descripción del Proyecto
+## Descripción del Proyecto
 
 La aplicación simula un pequeño sistema de pedidos que permite:
 
-- 🛒 **Agregar productos** a una base de datos.
-- 📦 **Crear pedidos** seleccionando uno o varios productos, junto con su cantidad.
-- 🔗 **Relacionar productos y pedidos** a través de la tabla intermedia `PedidoProducto`.
-- 👀 **Visualizar todos los pedidos** y sus productos asociados.
-- 💾 **Persistir los datos** utilizando una base de datos **SQLite** mediante **Sequelize ORM**.
+- **Agregar productos** a una base de datos.
+- **Crear pedidos** seleccionando uno o varios productos, junto con su cantidad.
+- **Relacionar productos y pedidos** a través de la tabla intermedia `PedidoProducto`.
+- **Visualizar todos los pedidos** y sus productos asociados.
+- **Persistir los datos** utilizando una base de datos **SQLite** mediante **Sequelize ORM**.
 
 El frontend está desarrollado con **HTML, CSS y JavaScript puro**, comunicándose con la API backend a través de **fetch y endpoints REST**.
 
 ---
 
-## 🧠 Objetivo Académico
+## Objetivo Académico
 
 El propósito de esta POC es **demostrar la integración práctica entre Sequelize y Express**, aplicando conceptos de:
 - Relaciones entre entidades.
@@ -30,7 +30,7 @@ El propósito de esta POC es **demostrar la integración práctica entre Sequeli
 
 ---
 
-## ⚙️ Tecnologías Utilizadas
+## Tecnologías Utilizadas
 
 **Backend**
 - [Node.js](https://nodejs.org/)
@@ -46,7 +46,7 @@ El propósito de esta POC es **demostrar la integración práctica entre Sequeli
 
 ---
 
-## 🔌 Endpoints Principales
+## Endpoints Principales
 
 | Método | Ruta | Descripción |
 |--------|------|--------------|
@@ -57,9 +57,9 @@ El propósito de esta POC es **demostrar la integración práctica entre Sequeli
 | **GET** | `/api/pedidos/:id/productos` | Ver productos de un pedido específico |
 
 ---
-## 🖥️ Ejecución del Proyecto
+## Ejecución del Proyecto
 
-### 🔧 Requisitos previos
+### Requisitos previos
 - Tener instalado **Node.js** y **pnpm** o **npm**.
 - Instalar las dependencias necesarias del proyecto:
 
@@ -71,7 +71,7 @@ El propósito de esta POC es **demostrar la integración práctica entre Sequeli
   npm install
   ```
   
-### ⚙️ Sincronizar la Base de Datos
+### Sincronizar la Base de Datos
 Antes de iniciar el servidor, asegurate de que la base de datos esté sincronizada con los modelos definidos.
 Ejecutá el siguiente comando:
   ```bash
@@ -80,16 +80,16 @@ Ejecutá el siguiente comando:
 Esto creará (o actualizará) las tablas definidas en models.js.
 <br/>
 
-### 🚀 Iniciar el Servidor
+### Iniciar el Servidor
 Una vez sincronizada la base de datos, levantá el servidor con:
   ```bash
   node src/index.js
   ```
 El servidor se ejecutará por defecto en: <br/>
-  👉 [http://localhost:3001](http://localhost:3001)
+  [http://localhost:3001](http://localhost:3001)
 <br/>
 
-### 🌐 Abrir el Frontend
+### Abrir el Frontend
 Para acceder a la interfaz visual: 
   - Abrí el archivo index.html ubicado en la carpeta Front/.
   - Podés abrirlo directamente en el navegador o usar una extensión como Live Server de VS Code.
